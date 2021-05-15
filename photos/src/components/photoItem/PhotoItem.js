@@ -1,6 +1,7 @@
 import classes from './PhotoItem.module.css';
 import FavouritesButton from '../FavouritesButton';
 import Card from '../card/Card';
+
 const PhotoItem = props => {
 	return (
 		<li className={classes.item}>

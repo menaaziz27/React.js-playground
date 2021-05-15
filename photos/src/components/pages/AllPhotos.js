@@ -5,6 +5,7 @@ import unsplash from '../api/unsplash';
 
 class AllPhotos extends React.Component {
 	state = { photos: [] };
+
 	getPhotos = async term => {
 		const response = await unsplash.get('/search/photos', {
 			params: {
