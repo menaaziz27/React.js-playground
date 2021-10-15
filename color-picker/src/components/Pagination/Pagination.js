@@ -16,7 +16,7 @@ const Pagination = ({ totalColors, colorsPerPage, paginate }) => {
 					{pageNumbers.map(number => {
 						return (
 							<li key={number}>
-								<p onClick={() => paginate(number)} href="#" className={pageStyle}>
+								<p onClick={() => paginate(number)} className={pageStyle}>
 									{number}
 								</p>
 							</li>
