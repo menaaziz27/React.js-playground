@@ -18,7 +18,7 @@ function App() {
 
 	return (
 		<div className="container p-20">
-			<h1 className="text-5xl text-center ">Hello There! 👋</h1>
+			<h1 className="text-5xl text-center ">Color Picker 🎨</h1>
 			<Colors colors={currentColors} copied={copied} setCopied={setCopied} />
 			<Pagination colorsPerPage={colorsPerPage} totalColors={hexaColors.length} paginate={paginateHandler} />
 		</div>
