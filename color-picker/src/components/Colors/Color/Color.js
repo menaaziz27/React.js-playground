@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 function Color({ color, copied, setCopied }) {
-	const [currentColor, setColor] = useState(color);
-
 	const onClickHandler = () => {
 		setCopied(color);
-		navigator.clipboard.writeText(currentColor);
+		navigator.clipboard.writeText(color);
 	};
 
 	const notify = (
@@ -18,9 +16,9 @@ function Color({ color, copied, setCopied }) {
 	);
 
 	return (
-		<div onClick={onClickHandler} className="relative cursor-pointer flex flex-col items-center p-20 border rounded-md" style={{ backgroundColor: currentColor }}>
+		<div onClick={onClickHandler} className="relative cursor-pointer flex flex-col items-center p-20 border rounded-md" style={{ backgroundColor: color }}>
 			{color}
-			{currentColor === copied ? notify : null}
+			{color === copied ? notify : null}
 		</div>
 	);
 }
