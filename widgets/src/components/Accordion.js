@@ -4,7 +4,11 @@ export const Accordion = ({ items }) => {
 	const [activeState, setActiveState] = useState(null);
 
 	const onTitleClick = index => {
-		setActiveState(index);
+		if (activeState === index) {
+			setActiveState(null);
+		} else {
+			setActiveState(index);
+		}
 	};
 
 	const renderedList = items.map((item, index) => {
@@ -12,11 +16,7 @@ export const Accordion = ({ items }) => {
 		// returning accordion item
 		return (
 			<React.Fragment key={item.title}>
-				<div
-					className={`title ${active}`}
-					onClick={() => onTitleClick(index)}
-					className="title active"
-				>
+				<div className={`title ${active}`} onClick={() => onTitleClick(index)}>
 					<i className="dropdown icon"></i>
 					{item.title}
 				</div>

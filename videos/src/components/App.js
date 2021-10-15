@@ -11,10 +11,10 @@ class App extends React.Component {
 		this.onSearchSubmit('buildings');
 	}
 
-	onSearchSubmit = async search => {
+	onSearchSubmit = async term => {
 		const response = await youtube.get('/search', {
 			params: {
-				q: search,
+				q: term,
 			},
 		});
 		this.setState({
@@ -37,10 +37,7 @@ class App extends React.Component {
 							<VideoDetail video={this.state.selectedVideo} />
 						</div>
 						<div className="five wide column">
-							<VideoList
-								onVideoSelect={this.onVideoSelect}
-								videos={this.state.videos}
-							/>
+							<VideoList onVideoSelect={this.onVideoSelect} videos={this.state.videos} />
 						</div>
 					</div>
 				</div>
