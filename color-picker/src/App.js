@@ -7,7 +7,7 @@ import Pagination from './components/Pagination/Pagination';
 function App() {
 	const [copied, setCopied] = useState('');
 	const [currentPage, setCurrentPage] = useState(1);
-	const [colorsPerPage] = useState(10);
+	const [colorsPerPage] = useState(12);
 
 	// get current posts and pass it to colors component to render them only
 	const indexOfLastColor = currentPage * colorsPerPage;
@@ -18,9 +18,9 @@ function App() {
 
 	return (
 		<div className="container p-20">
-			<h1 className="text-5xl text-center ">Color Picker 🎨</h1>
+			<h1 className="text-5xl text-center">Color Picker 🎨</h1>
 			<Colors colors={currentColors} copied={copied} setCopied={setCopied} />
-			<Pagination colorsPerPage={colorsPerPage} totalColors={hexaColors.length} paginate={paginateHandler} />
+			<Pagination colorsPerPage={colorsPerPage} totalColors={hexaColors.length} paginate={paginateHandler} currentPage={currentPage} />
 		</div>
 	);
 }
