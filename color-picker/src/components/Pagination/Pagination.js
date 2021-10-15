@@ -11,7 +11,7 @@ const Pagination = ({ totalColors, colorsPerPage, paginate, currentPage }) => {
 
 	return (
 		<div className="py-2 border-1 border-t-2 border-pink-300 mt-2 ">
-			<nav className="block">
+			<nav className="block flex justify-center">
 				<ul className="flex pl-0 rounded list-none flex-wrap">
 					{pageNumbers.map(number => {
 						return (
