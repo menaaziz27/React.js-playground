@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-<img src="expense-tracker.png">
+![alt text](expense-tracker.png)
 
 <br />
 
