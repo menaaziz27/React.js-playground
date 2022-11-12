@@ -1,0 +1,15 @@
+.point {
+	position: absolute;
+	background-color: blue;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+}
+
+.btn {
+	background-color: black;
+	color: white;
+	display: inline-block;
+	padding: 10px;
+	margin-right: 5px;
+}
